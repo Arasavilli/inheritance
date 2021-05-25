@@ -1,0 +1,177 @@
+
+                                                      
+package pack1;
+public class class1 {
+                    void display()
+                    {
+                    	System.out.println("hello everyone.....");
+                    }
+                 
+}
+package pack1;
+	class Class2 extends class1 
+	{
+	public static void main(String args[]) 
+	{ 
+	    Class2 obj = new Class2(); 
+	    obj.display(); 
+	} 
+	} 
+
+                                                   //SINGLE INHERITANCE//
+
+
+package Inheritance;
+class parent{
+	void bike() {
+		System.out.println("duke");
+	}
+	
+}
+class child extends parent{
+	void Mybike() {
+		System.out.println("pleasure"); 
+	}
+	
+}
+
+public class Mytest {
+  public static void main(String[] args) {
+	 child c=new child();
+	 c.Mybike();
+	 c.bike();
+	  
+}
+}
+
+
+
+                                                    //MULTIPLE INHERITANCE//
+
+
+package Inheritance;
+interface Father
+{
+ 
+    default void show()
+    {
+        System.out.println("Father");
+    }
+}
+  
+interface Mother
+{
+   
+    default void show()
+    {
+        System.out.println(" Mother");
+    }
+}
+  
+class MultipleInheritance implements Father,Mother
+{
+    public void show()
+    {
+    	Father.super.show();
+    	Mother.super.show();
+    }
+    public static void main(String args[])
+    {
+    	MultipleInheritance m = new MultipleInheritance();
+        m.show();
+    }
+}
+                                                        //MULTILEVEL INHERITANCE//
+
+package Inheritance;
+class Cricket
+{
+	void bowling() {System.out.println("im bowling");}
+	void batting(){System.out.println("im batting");}
+              }
+class Football extends Cricket
+{
+	void goalkeeper(){System.out.println("im goal Keeper");}
+               }
+class Basketball extends Football
+{
+	void team1() {System.out.println("Im from basketball team1");}
+}
+public class Multilevel{
+	  public static void main(String[] args) {
+		 Basketball b=new Basketball();
+		 b.goalkeeper();
+		 b.bowling();
+		  
+	}
+	}
+                                                        //HYBRID INHERITANCE//
+
+package Inheritance;
+class Wishes {
+	void wish()
+	{
+	
+	System.out.println("wish");
+	}
+}
+class Hello extends Wishes { 
+	void hello()
+	{
+	System.out.println("hello");
+     }
+}
+class Namastey extends Wishes {
+	void namastey()
+	{
+		System.out.println("say namastey");
+	}
+}
+class Hi extends Namastey{
+	void hi()
+	{
+		System.out.println("say hi");
+	}
+
+
+}
+public class Hybrid extends Namastey {
+    public static void main(String args[])
+    {
+    	Hi n= new Hi();
+    	n.namastey();
+        Hello h=new Hello();
+        h.hello();
+        h.wish();
+    }
+}
+                                                  //HIERARCHICAL INHERITANCE//
+
+
+package Inheritance;
+class A{
+	void method1() {
+	System.out.println("Im class A");
+	}
+}
+class B extends A
+{
+	void method2() {
+		System.out.println("Im class B");
+		}
+}
+class C extends A
+{
+	void method3() {
+		System.out.println("Im class c");
+		}
+}
+
+public class Hierarchical {
+public static void main(String[] args) {
+	C c=new C();
+	c.method3();
+	//c.method1();
+	
+}
+}
